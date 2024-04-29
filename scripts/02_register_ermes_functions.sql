@@ -1,5 +1,5 @@
 -- Function that create a session and acquire it in read-write mode.
-CREATE OR REPLACE FUNCTION create_and_rw_acquire(client_geo_coordinates POINT, expires_at NUMERIC)
+CREATE OR REPLACE FUNCTION CreateAndRwAcquireSession(client_geo_coordinates POINT, expires_at NUMERIC)
 RETURNS TEXT AS $$
 DECLARE
   session_geo_coordinates POINT;
@@ -41,7 +41,7 @@ $$ LANGUAGE plpgsql;
 
 
 -- Function that create a session and acquire it in read-only mode.
-CREATE OR REPLACE FUNCTION create_and_ro_acquire(client_geo_coordinates POINT, expires_at NUMERIC)
+CREATE OR REPLACE FUNCTION CreateAndRoAcquireSession(client_geo_coordinates POINT, expires_at NUMERIC)
 RETURNS TEXT AS $$
 DECLARE
   session_geo_coordinates POINT;

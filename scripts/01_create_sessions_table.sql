@@ -17,7 +17,7 @@ CREATE TABLE
 
 CREATE INDEX IF NOT EXISTS idx_static_offloadable_score ON sessions USING btree ((rw_uses = 0), static_offloadable_score);
 
-CREATE INDEX IF NOT EXISTS idx_expires_at ON sessions USING btree (expires_at)
+CREATE INDEX IF NOT EXISTS idxexpires_at ON sessions USING btree (expires_at)
 WHERE
   rw_uses = 0;
 
